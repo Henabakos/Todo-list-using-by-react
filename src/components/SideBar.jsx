@@ -1,17 +1,20 @@
 import React, { useState } from 'react'
 
-const SideBar = () => {
+const SideBar = (props) => {
+  
   const [show,setShow] = useState(false);
   const [Newtask,setNewtask] = useState("")
-  const [ToDoList,setNewTodolist] = useState([])
+  // const [ToDoList,setNewTodolist] = useState([])
   const ShowHide =()=>{
     setShow(!show)
   }
   const handleChange = (event) =>{
     setNewtask(event.target.value);
+    console.log(Newtask)
   }
+
   const addTask = () =>{
-    setNewTodolist([...ToDoList,Newtask])
+    props.helper(Newtask)
   }
 
   return (
@@ -22,7 +25,6 @@ const SideBar = () => {
         <input type="text" placeholder='write task you want to complete ' onChange={handleChange}/>
         <button onClick={addTask}>Add Task</button>
       </div>}
-      
     </div>
   )
 }
