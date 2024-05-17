@@ -88,15 +88,27 @@
 .main-page .search-bar{
     width: 75%;
     position: fixed;
+    background: rgb(39, 39, 39);
+    border: transparent;
+    box-shadow: 10px 10px 20px rgb(27, 27, 27);
     z-index: 999;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 .main-page .search-bar input{
     width: 75%;
     margin-top: 50px;
+    margin-bottom: 20px;
     padding: 18px 20px;
     border-radius: 20px;
     border: transparent;
-    box-shadow: 10px 10px 20px rgb(85, 85, 85);
+    background: rgb(228, 228, 228)  ;
+    box-shadow: 10px 10px 20px rgb(27, 27, 27);
+}
+.main-page .tasks{
+    position: absolute;
+    width:100%;
+    top:100px
 }
 .task {
     display: flex;

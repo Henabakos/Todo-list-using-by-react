@@ -12,10 +12,10 @@ const MainPage = ({ ToDoList }) => {
           return(
           <div className="task" key={todo}>
           <h3>{todo}</h3>
-          <button className='btn1'>Delete</button>
+          <button className='btn1' >Delete</button>
           <button className='btn2'>Complete</button>
         </div>
-  
+
           )
         })
         }

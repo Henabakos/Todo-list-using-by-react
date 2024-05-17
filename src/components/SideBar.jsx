@@ -15,12 +15,13 @@ const SideBar = (props) => {
 
   const addTask = () =>{
     props.helper(Newtask)
+    setShow(!show)
   }
 
   return (
     <div className='Sidebar'>
       <h1>To Do List</h1>
-      <div className='add-btn'><button onClick={ShowHide}>+</button>New Task</div>
+      <div className='add-btn'><button onClick={ShowHide}>+</button>Add Task</div>
       {show === true && <div className="showhide">
         <input type="text" placeholder='write task you want to complete ' onChange={handleChange}/>
         <button onClick={addTask}>Add Task</button>
